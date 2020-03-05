@@ -19,10 +19,16 @@
 <!-- Allows User to select how many characters they want-->
 <form>
 <div>
-  <input type= "number" min="1" max="20" value="8">
+  <input type= "number" min="8" max="128" value="8">
   <label for="Number of Characters"> Number Of Characters</label
   id="characterAmountNumber">
 </div>
+
+  <!-- Allows User to select if they want uppercase letters -->
+  <div>
+    <input type= "checkbox" id=includeLowercase>
+    <label for="includeLowercase"> I want lowercase letters</label>
+  </div>
 
   <!-- Allows User to select if they want uppercase letters -->
   <div>
