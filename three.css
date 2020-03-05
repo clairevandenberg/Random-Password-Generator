@@ -15,6 +15,7 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  margin: 0;
 }
 
 .wrapper {
@@ -41,6 +42,7 @@ header {
   max-width: 800px;
   padding: 30px 40px;
 }
+
 
 .card-header::after {
   content: " ";
@@ -97,7 +99,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+.password {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -116,6 +118,8 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  color:white;
+  background-color: black;
 }
 
 @media (max-width: 690px) {
