@@ -61,22 +61,24 @@ var charactersfunctions = [];
   // Loop lowercase and Generate a random lowercase letter
   var includeLowercasefun = function () {
     var includeLowercase = "abcdefghijklmnopqrstuvwxyz";
-    var randomlowercase = Math.floor(Math.random() * includeLowercase.length);
-
+    var randomlowercaseindex = Math.floor(Math.random() * includeLowercase.length);
+    var randomlowercase = includeLowercase [randomlowercaseindex]
     return randomlowercase;
   }
 
   // Loop Symbols and Generate a random symbol 
   var includeSymbolsfun = function (){
     var includeSymbols = "!@#$%^&*=-_";
-    var randomsymbol = Math.floor(Math.random() * includeSymbols.length);
+    var randomsymbolindex = Math.floor(Math.random() * includeSymbols.length);
+    var randomsymbol = includeSymbols [randomsymbolindex]
     return randomsymbol;
   }
 
   // Loop Uppercase and Generate a random uppercase letter 
   var includeUppercasefun = function () {
     var includeUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var randomUppercase = Math.floor(Math.random() * includeUppercase.length);
+    var randomUppercaseindex = Math.floor(Math.random() * includeUppercase.length);
+    var randomUppercase = includeUppercase [randomUppercaseindex]
 
     return randomUppercase;
   }
@@ -84,7 +86,7 @@ var charactersfunctions = [];
   // Loop numbers and Generate a random number
   var includeNumbersfun = function () {
     var includeNumbers = '0123456789';
-    var randomNumbers = Math.floor(Math.random() * includeNumbers.length);
-
-    return randomNumbers
+    var randomNumbersindex= Math.floor(Math.random() * includeNumbers.length);
+    var randomNumber = includeNumbers [randomNumbersindex]
+    return randomNumber
   }
