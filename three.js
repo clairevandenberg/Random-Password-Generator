@@ -1,5 +1,5 @@
 // Promt to open page to password generator.
-var length = prompt("Do You Want To Generate a Secure Password?")
+//var length = prompt("Do You Want To Generate a Secure Password?")
 
 // Assignment Code
 var generateBtn = document.querySelector("#Generate");
@@ -12,8 +12,10 @@ var includeSymbols = document.getElementById("includeSymbols").checked;
 // Password prompts 
 generateBtn.addEventListener('click', askcharacterconfirm);
 
+var passwordlength
+
 function askcharacterconfirm() {
-  characterAmountNumber = prompt("How long do you want your password to be?")
+  passwordlength = prompt("How long do you want your password to be?")
 
   includeUppercase = confirm("Do you want to include upper case letters?")
 
@@ -24,67 +26,65 @@ function askcharacterconfirm() {
   includeNumbers = confirm(" Do you want to include numbers")
 
   console.log(includeSymbols, includeNumbers, includeUppercase, characterAmountNumber, includeLowercase)
+
+  avaliableCharacters ();
 }
 
-if (includeLowercase === false & includeUppercase === false & includeNumbers === false & includeSymbols === false) {
-  alert("you must tick atleast one of the boxes");
-
+//if (includeLowercase === false & includeUppercase === false & includeNumbers === false & includeSymbols === false) {
+ // alert("you must tick atleast one of the boxes");
+//}
   // Making new function- Avaliavle function - checking if variables are true or false. 
 
-  function avaliableCharacters 
-var avaliableCharacters = [];
+  function avaliableCharacters () {
 
-  if (includeSymbols === true) avaliableCharacters.push(includeSymbols);
-  if (includeUppercase === true) avaliableCharacters.push(includeUppercase);
-  if (includeNumbers === true) avaliableCharacters.push(includeNumbers);
-  if (includeLowercase === true) avaliableCharacters.push(includeLowercase);
+var charactersfunctions = [];
+
+  if (includeSymbols === true){ charactersfunctions.push(includeSymbolsfun)};
+  if (includeUppercase === true) { charactersfunctions.push(includeUppercasefun)};
+  if (includeNumbers === true) { charactersfunctions.push(includeNumbersfun)};
+  if (includeLowercase === true) { charactersfunctions.push(includeLowercasefun)};
+  console.log (charactersfunctions)
 
   var password = ""
   for (i = 0; i < passwordlength; i++) {
-    var randomNumber = [Math.floor(Math.random() * includeLowercase.length)];
-
+  var randomNumber = Math.floor(Math.random() * charactersfunctions.length);
+  console.log (charactersfunctions [randomNumber])
+  console.log (randomNumber)
+  var character= charactersfunctions [randomNumber] ();
+  console.log (character)
+  password += character
   }
-
-  // Write password to the #password input
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-  }
+  console.log (password)
+}
+  
 
   // Loop lowercase and Generate a random lowercase letter
-  function includeLowercase() {
+  var includeLowercasefun = function () {
     var includeLowercase = "abcdefghijklmnopqrstuvwxyz";
-    var randomLowercase = [Math.floor(Math.random() * includeLowercase.length)];
+    var randomlowercase = Math.floor(Math.random() * includeLowercase.length);
 
-    console.log(num);
     return randomlowercase;
   }
 
   // Loop Symbols and Generate a random symbol 
-  function includeSymbols() {
+  var includeSymbolsfun = function (){
     var includeSymbols = "!@#$%^&*=-_";
-    var randomsymbol = [Math.floor(Math.random() * includeSymbols.length)];
-
-    console.log(includeSymbols);
+    var randomsymbol = Math.floor(Math.random() * includeSymbols.length);
     return randomsymbol;
   }
 
   // Loop Uppercase and Generate a random uppercase letter 
-  function includeUppercase() {
+  var includeUppercasefun = function () {
     var includeUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var randomUppercase = [Math.floor(Math.random() * includeUppercase.length)];
+    var randomUppercase = Math.floor(Math.random() * includeUppercase.length);
 
-    console.log(includeUppercase);
     return randomUppercase;
   }
 
   // Loop numbers and Generate a random number
-  function includeNumbers() {
+  var includeNumbersfun = function () {
     var includeNumbers = '0123456789';
-    var randomnNmbers = [Math.floor(Math.random() * includeNumbers.length)];
+    var randomNumbers = Math.floor(Math.random() * includeNumbers.length);
 
-    console.log(includeNumbers);
     return randomNumbers
   }
