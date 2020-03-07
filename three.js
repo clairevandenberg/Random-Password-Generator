@@ -1,14 +1,13 @@
 // Promt to open page to password generator.
-var length = prompt ("Do You Want To Generate a Secure Password")
-// make this promt unbreakable add yes and no.
-
+var length = prompt ("Do You Want To Generate a Secure Password?")
+  
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var characterAmountNumber = documnet.querySelector("#amountNumber");
-var includeLowercase = document.querySelector("#lowercase");
-var includeUppercase = document.querySelector("#uppercase");
-var includeNumbers = document.querySelector("#number");
-var includeSymbols = document.querySelector("#symbol");
+var characterAmountNumber = document.getElementById("characterAmountNumber");
+var includeLowercase = document.getElementById("includeLowercase");
+var includeUppercase = document.getElementById("includeUppercase");
+var includeNumbers = document.getElementById("includeNumbers");
+var includeSymbols = document.getElementById("includeSymbols");
 
 // Write password to the #password input
 function writePassword() {
@@ -19,38 +18,38 @@ function writePassword() {
   
 
    // Loop lowercase and Generate a random lowercase letter
-  function lowercase () {
-  var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var randomlowercase = [Math.floor(Math.random() * lowercase.length)];
+  function includeLowercase () {
+  var includeLowercase = "abcdefghijklmnopqrstuvwxyz";
+  var randomLowercase = [Math.floor(Math.random() * includeLowercase.length)];
 
   console.log(num);
   return randomlowercase;
 }
 
    // Loop Symbols and Generate a random symbol 
-   function symbol () {
-   var symbol = '!@#$%^&*=-_';
-    var randomsymbol = [Math.floor(Math.random() * symbol.length)];
+   function includeSymbols () {
+   var includeSymbols = '!@#$%^&*=-_';
+    var randomsymbol = [Math.floor(Math.random() * includeSymbols.length)];
     
-    console.log(symbol);
-    return randomsymbol;
+    console.log(includeSymbols);
+    return includeSymbols;
   }
 
   // Loop Uppercase and Generate a random uppercase letter 
-  function uppercase() {
-  var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var randomuppercase = [Math.floor(Math.random() * uppercase.length)];
+  function includeUppercase() {
+  var includeUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var randomUppercase = [Math.floor(Math.random() * includeUppercase.length)];
     
-    console.log(uppercase);
-    return randomuppercase;
+    console.log(includeUppercase);
+    return randomUppercase;
   }
 
   // Loop numbers and Generate a random number
-  function numbers () {
-  var number = '0123456789';
-  var randomlowercase = [Math.floor(Math.random() * numbers.length)];
+  function includeNumbers () {
+  var includeNumbers = '0123456789';
+  var randomnNmbers = [Math.floor(Math.random() * includeNumbers.length)];
     
-    console.log(number);
-    return randomlowercase
+    console.log(includeNumbers);
+    return randomNumbers
   }
 }
