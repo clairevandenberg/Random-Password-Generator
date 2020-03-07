@@ -13,14 +13,14 @@
 <h1>Password Generator</h1>  
 
 <div class="card">
-<h2> Generate A Password</h2>
-<h3 class="password"> Your New Password </h3>
+<h2> Generate A Password</h2> 
+<h3 class="password" id = passwordDisplay> Your New Secure Password </h3>
 
 <!-- Allows User to select how many characters they want-->
-<form>
+<form id="passwordGeneratorForm"> 
 <div>
   <input type= "number" min="8" max="128" value="8">
-  <label for="Number of Characters"> Number Of Characters</label
+  <label form="Number of Characters"> Number Of Characters</label
   id="characterAmountNumber">
 </div>
 
@@ -48,7 +48,7 @@
     <label for="includeSymbols"> I want Symbols</label>
 </div>
 
-  <button type= "submit" class="btn">Generate Password</button>
+  <button type= "submit" class="generateBtn">Generate Password</button>
 </form>
 </div>
 
