@@ -21,7 +21,7 @@ function writePassword() {
    // Loop lowercase and Generate a random lowercase letter
   function lowercase () {
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var randomlowercase = Math.floor(Math.random() *) + 1;
+  var randomlowercase = [Math.floor(Math.random() * lowercase.length)];
 
   console.log(num);
   return randomlowercase;
@@ -30,7 +30,7 @@ function writePassword() {
    // Loop Symbols and Generate a random symbol 
    function symbol () {
    var symbol = '!@#$%^&*=-_';
-    var randomsymbol = Math.floor(Math.random() *) + 1;
+    var randomsymbol = [Math.floor(Math.random() * symbol.length)];
     
     console.log(symbol);
     return randomsymbol;
@@ -39,7 +39,7 @@ function writePassword() {
   // Loop Uppercase and Generate a random uppercase letter 
   function uppercase() {
   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var randomuppercase = Math.floor(Math.random() *) + 1;
+    var randomuppercase = [Math.floor(Math.random() * uppercase.length)];
     
     console.log(uppercase);
     return randomuppercase;
@@ -48,11 +48,9 @@ function writePassword() {
   // Loop numbers and Generate a random number
   function numbers () {
   var number = '0123456789';
-  var randomlowercase = Math.floor(Math.random() *) + 1;
+  var randomlowercase = [Math.floor(Math.random() * numbers.length)];
     
     console.log(number);
     return randomlowercase
   }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+}
