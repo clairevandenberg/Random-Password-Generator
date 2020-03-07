@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="three.js"></script>
     <link rel="stylesheet" href="three.css">
     <title> Password Generator</title>
 </head>
@@ -19,9 +18,9 @@
 <!-- Allows User to select how many characters they want-->
 <form id="passwordGeneratorForm"> 
 <div>
-  <input type= "number" min="8" max="128" value="8">
-  <label form="Number of Characters"> Number Of Characters</label
+  <input type= "number" min="8" max="128" value="8"
   id="characterAmountNumber">
+  <label form="Number of Characters"> Number Of Characters</label>
 </div>
 
   <!-- Allows User to select if they want uppercase letters -->
@@ -48,10 +47,12 @@
     <label for="includeSymbols"> I want Symbols</label>
 </div>
 
-  <button type= "submit" class="generateBtn">Generate Password</button>
+  <button type= "button" class="generateBtn" id="Generate">Generate Password</button>
+
 </form>
 </div>
 
+<script type="text/javascript" src="three.js"></script>
 
 </body>
 </html>
