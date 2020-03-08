@@ -1,5 +1,8 @@
-// Promt to open page to password generator.
-var length = prompt("Do You Want To Generate a Secure Password?");
+// Confirm to open page to password generator.
+var length = confirm("Do You Want To Generate a Secure Password?");
+if (length === false) {
+  alert("you must click ok to continue");
+  }
 
 // Assignment Code
 var generateBtn = document.querySelector("#Generate");
@@ -12,7 +15,6 @@ var includeSymbols = document.querySelector("includeSymbols").checked;
 // Password prompts 
 generateBtn.addEventListener('click', askcharacterconfirm);
 
-var passwordlength = [];
 
 function askcharacterconfirm() {
   passwordlength = prompt("How long do you want your password to be?")
@@ -25,13 +27,22 @@ function askcharacterconfirm() {
 
   includeNumbers = confirm(" Do you want to include numbers")
 
-  console.log(includeSymbols, includeNumbers, includeUppercase, characterAmountNumber, includeLowercase)
-
   avaliableCharacters ();
+
+if (isNaN(passwordlength) || length <8 || length >128) {
+  alert ('your password must be a minimum of 8 or maximum of 128');
+  submitOK = "false"
 }
+
 if (includeLowercase === false & includeUppercase === false & includeNumbers === false & includeSymbols === false) {
 alert("you must tick atleast one of the boxes");
-//}
+}
+
+if (submitOK == "false") {
+  return false;
+}
+}
+
   // Making new function- Avaliavle function - checking if variables are true or false. 
 
 function avaliableCharacters () {
@@ -49,13 +60,9 @@ var charactersfunctions = [];
   var password = ""
   for (i = 0; i < passwordlength; i++) {
   var randomNumber = Math.floor(Math.random() * charactersfunctions.length);
-  console.log (charactersfunctions [randomNumber])
-  console.log (randomNumber)
   var character= charactersfunctions [randomNumber] ();
-  console.log (character)
   password += character
   }
-  console.log (password)
 }
 
   // Loop lowercase and Generate a random lowercase letter
@@ -88,7 +95,7 @@ var charactersfunctions = [];
     var includeNumbers = '0123456789';
     var randomNumbersindex= Math.floor(Math.random() * includeNumbers.length);
     var randomNumber = includeNumbers [randomNumbersindex]
-    return randomNumber
+    return randomNumber;
   }
 
 document.getElementById ("passwordDisplay").innerHTML = randomNumber;
