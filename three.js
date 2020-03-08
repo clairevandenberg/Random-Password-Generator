@@ -44,6 +44,8 @@ var charactersfunctions = [];
   if (includeLowercase === true) { charactersfunctions.push(includeLowercasefun)};
   console.log (charactersfunctions)
 
+    // For loop to generate random password using Math.random based on users preferences of number characters
+
   var password = ""
   for (i = 0; i < passwordlength; i++) {
   var randomNumber = Math.floor(Math.random() * charactersfunctions.length);
