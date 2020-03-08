@@ -64,6 +64,8 @@ var charactersfunctions = [];
   password += character
   }
 }
+  // Display Password
+  document.getElementById ("passwordDisplay").innerHTML = randomNumber;
 
   // Loop lowercase and Generate a random lowercase letter
   var includeLowercasefun = function () {
@@ -97,5 +99,3 @@ var charactersfunctions = [];
     var randomNumber = includeNumbers [randomNumbersindex]
     return randomNumber;
   }
-
-document.getElementById ("passwordDisplay").innerHTML = randomNumber;
