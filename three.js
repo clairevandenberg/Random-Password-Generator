@@ -1,18 +1,18 @@
 // Promt to open page to password generator.
-//var length = prompt("Do You Want To Generate a Secure Password?")
+var length = prompt("Do You Want To Generate a Secure Password?");
 
 // Assignment Code
 var generateBtn = document.querySelector("#Generate");
-var characterAmountNumber = document.getElementById("characterAmountNumber").value;
-var includeLowercase = document.getElementById("includeLowercase").checked;
-var includeUppercase = document.getElementById("includeUppercase").checked;
-var includeNumbers = document.getElementById("includeNumbers").checked;
-var includeSymbols = document.getElementById("includeSymbols").checked;
+var characterAmountNumber = document.querySelector("passwordLength").value;
+var includeLowercase = document.querySelector("includeLowercase").checked;
+var includeUppercase = document.querySelector("includeUppercase").checked;
+var includeNumbers = document.querySelector("includeNumbers").checked;
+var includeSymbols = document.querySelector("includeSymbols").checked;
 
 // Password prompts 
 generateBtn.addEventListener('click', askcharacterconfirm);
 
-var passwordlength
+var passwordlength = [];
 
 function askcharacterconfirm() {
   passwordlength = prompt("How long do you want your password to be?")
@@ -29,13 +29,12 @@ function askcharacterconfirm() {
 
   avaliableCharacters ();
 }
-
-//if (includeLowercase === false & includeUppercase === false & includeNumbers === false & includeSymbols === false) {
- // alert("you must tick atleast one of the boxes");
+if (includeLowercase === false & includeUppercase === false & includeNumbers === false & includeSymbols === false) {
+alert("you must tick atleast one of the boxes");
 //}
   // Making new function- Avaliavle function - checking if variables are true or false. 
 
-  function avaliableCharacters () {
+function avaliableCharacters () {
 
 var charactersfunctions = [];
 
@@ -56,7 +55,6 @@ var charactersfunctions = [];
   }
   console.log (password)
 }
-  
 
   // Loop lowercase and Generate a random lowercase letter
   var includeLowercasefun = function () {
@@ -90,3 +88,5 @@ var charactersfunctions = [];
     var randomNumber = includeNumbers [randomNumbersindex]
     return randomNumber
   }
+
+document.getElementById ("passwordDisplay").innerHTML = randomNumber;
