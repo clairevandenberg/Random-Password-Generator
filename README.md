@@ -5,6 +5,6 @@ Characters go through loop to generate random charcaters and number of character
 
 Test my code [here](https://clairevandeneberg.github.io/HomeworkThree/)
 
-![Image description](/Users/clairevandenberg/Desktop/Coding Boot Camp/HomeworkThree/Screen Shot 2020-03-08 at 12.37.34 pm.png)
-![Image description](/Screen Shot 2020-03-08 at 12.37.34 pm.png)
+![alt tag](Screen Shot 2020-03-08 at 12.37.34 pm.png)
+![alt tag](Screen Shot 2020-03-08 at 12.37.44 pm.png)
 
